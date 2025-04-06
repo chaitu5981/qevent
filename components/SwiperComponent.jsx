@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
-import { swiperContent } from "@/constants/swiperContent";
+import { swiperContent } from "../constants/swiperContent";
 
 const SwiperComponent = () => {
   return (

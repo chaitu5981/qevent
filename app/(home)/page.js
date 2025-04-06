@@ -1,7 +1,7 @@
-import EventCard from "@/components/EventCard";
-import SwiperComponent from "@/components/SwiperComponent";
+import EventCard from "../../components/EventCard";
+import SwiperComponent from "../../components/SwiperComponent";
 import React from "react";
-import { dummyEvents } from "@/constants/dummyEvents";
+import { dummyEvents } from "../../constants/dummyEvents";
 
 function App() {
   return (
