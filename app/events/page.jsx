@@ -1,7 +1,7 @@
 "use client";
 import EventCard from "../../components/EventCard";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 const EventsPage = () => {
   const [events, setEvents] = useState([]);
@@ -32,4 +32,13 @@ const EventsPage = () => {
     </div>
   );
 };
-export default EventsPage;
+
+const Events = () => {
+  return (
+    <Suspense fallback={<div>Loading Events...</div>}>
+      <EventsPage />
+    </Suspense>
+  );
+};
+
+export default Events;
