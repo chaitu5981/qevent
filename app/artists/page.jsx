@@ -1,4 +1,4 @@
-import ArtistCard from "@/components/ArtistCard";
+import ArtistCard from "../../components/ArtistCard";
 
 const ArtistPage = async () => {
   const artistsRes = await fetch("https://qevent-backend.labs.crio.do/artists");
