@@ -8,15 +8,16 @@ import React, { useEffect, useState } from "react";
 import { HomeIcon, PersonIcon } from "@radix-ui/react-icons";
 import { CgProfile } from "react-icons/cg";
 import { useSession, signIn, signOut } from "next-auth/react";
-
+import { MdPersonAddAlt } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { TfiTicket } from "react-icons/tfi";
 const Header = () => {
   const [session, setSession] = useState(false);
   const sessionDetails = useSession();
+
   useEffect(() => {
     setSession(sessionDetails.status === "authenticated");
-  }, []);
+  }, [sessionDetails]);
   return (
     <nav className="drop-shadow-2xl flex items-center justify-between p-3 border-b border-slate-200 border-spacing-0 bg-slate-100 h-24">
       <div className="hover-inverse flex items-center justify-center gap-2">
@@ -76,6 +77,17 @@ const Header = () => {
             </div>
             <p>Tags</p>
           </Link>
+          {session ? (
+            <Link
+              href={"/create-event"}
+              className="flex items-center justify-center gap-2 hover:text-primary hover:scale-105 hover:underline-offset-8 hover:underline transition-all"
+            >
+              <div>
+                <MdPersonAddAlt />
+              </div>
+              <p>Create Event</p>
+            </Link>
+          ) : null}
 
           {session ? (
             <button

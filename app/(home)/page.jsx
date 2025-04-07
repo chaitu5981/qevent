@@ -14,7 +14,7 @@ function App() {
 
       <div className="flex items-center justify-around mt-8 mb-32">
         {dummyEvents.map((eventData) => (
-          <EventCard eventData={eventData} />
+          <EventCard eventData={eventData} key={eventData.id} />
         ))}
       </div>
     </div>

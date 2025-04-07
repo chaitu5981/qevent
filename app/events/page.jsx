@@ -1,5 +1,5 @@
 "use client";
-import EventCard from "@/components/EventCard";
+import EventCard from "../../components/EventCard";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 

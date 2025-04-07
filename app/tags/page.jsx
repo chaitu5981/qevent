@@ -1,4 +1,4 @@
-import Tag from "@/components/Tag";
+import Tag from "../../components/Tag";
 
 const TagsPage = async () => {
   const tagsRes = await fetch("https://qevent-backend.labs.crio.do/tags");
