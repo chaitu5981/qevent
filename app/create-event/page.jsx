@@ -78,7 +78,7 @@ const CreateEvent = () => {
     console.log(formData);
     try {
       const { data } = await axios.post(
-        "https://qevent-backend.labs.crio.do/eventss",
+        "https://qevent-backend.labs.crio.do/events",
         { id, ...formData, image }
       );
       if (data) router.push("/events");
